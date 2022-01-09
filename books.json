@@ -1,0 +1,5 @@
+[
+  {"id": 1, "title": "Boso przez swiat", "author": "Cejrowski", "is_home": true},
+  {"id": 2, "title": "Hobbit", "author": "Tolkien", "is_home": true},
+  {"id": 3, "title": "Jest masno", "author": "Masny Ben", "is_home": false}
+]
