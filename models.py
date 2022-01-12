@@ -29,4 +29,12 @@ class Books:
             self.books[index] = data
             return True
         return False
+    def delete(self, id):
+        book = self.get(id)
+        if book:
+            self.books.remove(book)
+            self.save_all()
+            return True
+        return False
+
 books = Books()

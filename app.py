@@ -52,6 +52,13 @@ def book_update(book_id):
     books.update(book_id, book)
     return jsonify({'book': book})
 
+@app.route("/api/v1/lib/<int:book_id>", methods=["DELETE"])
+def book_delete(book_id):
+    result = books.delete(book_id)
+    if not result:
+        abort(404)
+    return jsonify({'result': result})
+
 @app.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found', 'status_code': 404}), 404)
